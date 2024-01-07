@@ -325,6 +325,7 @@ class Model(nn.Module):
 
         custom = {'imgsz': self.model.args['imgsz'], 'batch': 1, 'data': None, 'verbose': False}  # method defaults
         args = {**self.overrides, **custom, **kwargs, 'mode': 'export'}  # highest priority args on the right
+        print(args)
         return Exporter(overrides=args, _callbacks=self.callbacks)(model=self.model)
 
     def train(self, trainer=None, **kwargs):

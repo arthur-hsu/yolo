@@ -12,9 +12,10 @@ settings.update({'runs_dir': f'{home}/runs', 'tensorboard':True})
 settings.reset()
 # Return a specific setting
 print(settings['runs_dir'])
-model = YOLO('./best.pt')
+mod = './yolo-fastestv2-opt.onnx'
+model = YOLO(mod)
 device = "mps" if torch.backends.mps.is_available() else "cpu"  # 'mps' is for Apple Silicon GPU
-model = model.to(device)
+# model = model.to(device)
 
 
 
