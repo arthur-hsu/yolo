@@ -1,0 +1,23 @@
+#python version 3.11.7
+# tensorflow
+tensorflow<=2.13.1
+tensorflow-metal
+mediapipe
+
+# yolo
+ultralytics
+roboflow
+torch
+torchvision
+torchaudio
+
+# for converting onnx to tflite
+onnx
+onnx2tf
+nvidia-pyindex
+onnx_graphsurgeon
+onnx2tf>=1.15.4,<=1.17.5
+sng4onnx>=1.0.1
+onnxsim>=0.4.33
+tflite_support
+onnxruntime
